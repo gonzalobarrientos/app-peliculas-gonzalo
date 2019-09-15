@@ -1,0 +1,26 @@
+<br>
+<br>
+<div class="row">
+    <div class="col-6 my-auto text-right">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" (click)="ObtenerCategoria('popular')">Populares</button>
+            <button type="button" class="btn btn-secondary" (click)="ObtenerCategoria('kids')">Niños</button>
+            <button type="button" class="btn btn-secondary" (click)="ObtenerCategoria('teatro')">En Teatros</button>
+        </div>
+    </div>
+    <div class="col-6 my-auto">
+        <div class="row">
+            <div class="col-2 my-auto">
+                <label for="">Años: </label>
+            </div>
+            <div class="col-4 my-auto">
+                <select class="form-control" id="exampleFormControlSelect1" (change)="ObtenerPorAno($event.target.value)">
+                    <option value="0">--Seleccionar--</option>
+                    <option *ngFor="let year of years" [value]="year.id">{{year.id}}</option>
+                  </select>
+            </div>
+        </div>
+    </div>
+</div>
+<app-tarjetas [items]="populares">
+</app-tarjetas>

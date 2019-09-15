@@ -1,0 +1,22 @@
+<br>
+<br>
+<div class="card mb-12" style="max-width: 1000px;">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="https://image.tmdb.org/t/p/w500{{pelicula.poster_path}}" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Titulo:</strong> {{pelicula.title}}</h5>
+                <p class="card-text text-justify"> <strong>Descripción: </strong>{{pelicula.overview}}</p>
+                <p class="card-text text-justify"> <strong>Titulo Original: </strong>{{pelicula.original_title}}</p>
+                <p class="card-text text-justify"> <strong>Popularidad: </strong>{{pelicula.popularity}}</p>
+                <p class="card-text text-justify"> <strong>Votos: </strong>{{pelicula.vote_count}}</p>
+                <p class="card-text text-justify"> <strong>Promedio de Votos: </strong>{{pelicula.vote_average}}</p>
+                <p class="card-text text-justify"> <strong>Fecha de Lanzamiento: </strong>{{pelicula.release_date}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<a [routerLink]="['/home']" class="btn btn-outline-danger btn-block">Regresar</a>

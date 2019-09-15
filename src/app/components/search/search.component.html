@@ -1,0 +1,14 @@
+<h1>Peliculas <small>{{peli}}</small></h1>
+
+<hr>
+
+<div class="row animated fadeIn fast" *ngIf="populares.length == 0">
+    <div class="col-md-12">
+        <div>
+            No existen resultados con el término: {{peli}}
+        </div>
+
+    </div>
+</div>
+<app-tarjetas [items]="populares">
+</app-tarjetas>

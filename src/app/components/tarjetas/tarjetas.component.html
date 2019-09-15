@@ -1,0 +1,13 @@
+<div class="card-columns m-5 animated fadeIn">
+    <div *ngFor="let item of items" class="card puntero">
+        <img class="card-img-top" (click)="buscarPelicula(item.id)" src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" height="500px" title="Popularidad: {{item.popularity}} | Votos: {{item.vote_count}}" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{item.original_title}}</h5>
+            <p class="card-text text-justify">
+                <!-- <span *ngFor="let artista of item.artists" class="badge badge-pill badge-primary">
+            {{artista.name}}
+          </span> -->
+                {{item.overview}}
+            </p>
+        </div>
+    </div>

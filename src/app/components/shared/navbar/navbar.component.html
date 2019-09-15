@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="https://www.themoviedb.org/assets/1/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg" width="30" height="30" alt=""> PeliculasAPP
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['home']">Home</a>
+            </li>
+            <!-- <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['search']">Search</a>
+            </li> -->
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" (keyup.enter)="buscarPelicula(buscarTexto.value)" #buscarTexto>
+            <button class="btn btn-outline-success my-2 my-sm-0" (click)="buscarPelicula(buscarTexto.value)" type="submit">Buscar</button>
+        </form>
+    </div>
+</nav>
